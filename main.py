@@ -1,4 +1,6 @@
 # RegEx_Practice
+# https://regex101.com - site for learning that I used
+
 import re
 
 just_text = re.findall("([0-9a-zA-z\W]+)", "just the text! "
