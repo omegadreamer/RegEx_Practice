@@ -3,7 +3,6 @@
 
 import re
 
-
 #  here just using re.FINDALL
 just_text = re.findall("([0-9a-zA-z\W]+)", "just the text! "
                                            "Its still just the text "
@@ -31,12 +30,10 @@ phone = re.compile(r"^(\+7|8)(\s?)(\(?)([0-9]{3})(\)?)(\s?)(\d{3})"
 print(phone.findall(test_phone))
 print(phone.findall(test_phone_2))
 
-
 #  here using re.SPLIT to get list of url components
 test_url2 = "https://github.com/omegadreamer/RegEx_Practice"
 url = re.compile(r"(/|://)")  # url split
 print(url.split(test_url2))
-
 
 #  here using re.MATH to check password
 test_password = "125656501_!Gg"
@@ -46,3 +43,8 @@ if match_password:
     print("Password successful")
 else:
     print("Password unsuccessful")
+
+#  here using re.SUB to replace string with numbers
+test_replace = "888 replace 323 the 5995 numbers"
+print("before: " + test_replace)
+print("after: " + numbers.sub("*", test_replace))  # using old pattern "numbers"
